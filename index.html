@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application Form</title>    
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(184, 205, 237);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            background-color: rgb(220, 219, 219);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        form:hover{
+            color: black;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="date"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leave Application Form</h1>
+    
+    <form action="admin.html" method="post">
+        
+        <label style="color: rgb(238, 20, 20);">Date:</label>
+        <input type="text" value="current date " readonly>
+
+        <label for="applicant">Applicant Name:</label>
+        <input type="text" id="applicant" name="applicant" placeholder="Ex:Lucky" required>
+
+        <label for="authority">Authority:</label>
+        <input type="text" id="authority" name="authority" placeholder="Ex: Principal/HOD" required>
+
+        <label for="reason">Leave Applying For:</label>
+        <textarea id="reason" name="reason" placeholder="Enter reason for leave" required></textarea>
+
+        <label for="start">Leave Start Date:</label>
+        <input type="date" id="start" name="start" required>
+
+        <label for="end">Leave End Date:</label>
+        <input type="date" id="end" name="end" required>
+
+        <button type="submit">Apply</button>
+    </form>
+    <script>
+        window.location.href='index.html';
+    </script>
+</body>
+</html>
